@@ -1,4 +1,4 @@
-# Mongo DB simple introduction
+#Lesson 2- Mongo DB simple introduction
 
 ## Pre-step
 
