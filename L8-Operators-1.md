@@ -125,7 +125,7 @@
 }
 ```
 
-- tip: You can thought `$all` and `$in` were `&` and `||` operator.
+- tip: You can thought `$all` and `$in` were `&` and `||` operator.(But we do have `and` and `or` selector in mongodb.)
 
 
 
