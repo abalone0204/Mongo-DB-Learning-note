@@ -32,5 +32,5 @@
 
 > An application communicates with MongoDB by way of a client library, called a `driver`.
 
-- (http://docs.mongodb.org/manual/applications/drivers/)[http://docs.mongodb.org/manual/applications/drivers/]
+- [http://docs.mongodb.org/manual/applications/drivers/](http://docs.mongodb.org/manual/applications/drivers/)
 
