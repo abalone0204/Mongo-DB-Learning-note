@@ -1,4 +1,4 @@
-# Install
+#Lesson 1 - Install
 
 > For mac OSX(Yosemite)
 
