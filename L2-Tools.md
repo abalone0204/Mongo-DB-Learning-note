@@ -16,9 +16,21 @@
 
 - `mongoexport -d DIRNAME -c USER --file FILENAME`
 
+- `mongodump` create a binary export
+
+- `mongorestore` restore a binary export
+
+- `bsondump` converting binary data to json
+
 - Quikly take a look what mongodb can do, if it's not so clear now, keep move on since knowing mongodb better would change the things you thought at first.
 
 ## BSON
 
 - Short for **B**inary **JSON**. It's the way mongodb storing data.
+
+## Driver
+
+> An application communicates with MongoDB by way of a client library, called a `driver`.
+
+- (http://docs.mongodb.org/manual/applications/drivers/)[http://docs.mongodb.org/manual/applications/drivers/]
 
