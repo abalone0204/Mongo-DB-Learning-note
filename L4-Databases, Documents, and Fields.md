@@ -20,10 +20,52 @@
 
 - That's a liitle strange, but that's because mongodb won't create a database before you put some data in it,.
 
-- Recap: `use DATABASE_NAME` can create a database.
+- Recap: `use DATABASE_NAME` can create a database although it won't be implemented before you put some real data inside.
 
 ## Create collection
 
 - `db.links` would create collection named `links` for you.
 
 - `db.links.count()` can see how many document in links now.
+
+- Let's insert something in it.
+
+- `db.links.insert({title: "Denny Posts", url: "abalone0204@github.io", description: "I'm Denny, developer loveing programmin, eating, analyzing.", tags:["statistics", "murmurs", "web"], saved_on: new Date() });`
+
+- You might say: "wow, I can put array inside it without creating another table?". Like Obama says, "Yes, you can!"
+
+- Here's the cooler thing , remember the client is a javascript console? You can use instantly insert an object to MongoDB.
+
+```javascript
+{
+    "meta" : {
+        "OS" : "Mac OSX - Yosemite",
+        "browser" : "Chrome"
+    },
+    "title" : "Denny's Blog",
+    "url" : "http://abalone0204.github.io",
+    "tags" : [
+        "Tech",
+        "Foods",
+        "Rails",
+        "Node.js"
+    ],
+    "descriptions" : "I'm Denny, developer loveing programmin, eating, analyzing.",
+    "saved_on" : ISODate("2015-02-03T03:04:07.829Z")
+}
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
