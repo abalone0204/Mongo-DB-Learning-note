@@ -15,9 +15,9 @@
 ```javascript
 
 db.links.group({ 
-    key:{ userId: true},
+    key: { userId: true},
     initial: { favCount: 0},
-    reduce: function(doc, i){
+    reduce: function(doc, o){
         o.favCount += doc.favourites;
     },
     finalize: function(o){
@@ -25,8 +25,28 @@ db.links.group({
     }
 })
 
-
 ```
+- Now we chekc these code step by step.
+
+- `key`: It's what you want the data group based on. `key:{ userId: true}` means that we want to group data based on userId.
+
+- `initial`: We set initial value to our result document
+
+- `reduce`:  This function will run on each document. The first argument is original document, the second is the result.
+
+- `finalize` : each document which grouped by `key` will run the `finalize` after they've completed `reduce`.
+
+- But you'll encounter an error, since mongo won't let you use shared collection in `group()`, check the doc [here](http://docs.mongodb.org/manual/reference/command/group/).
+
+
+```javascript
+finalize: function(o){
+        o.name = db.users.findOne({_id: o.userId}).name;
+    }
+```
+
+
+`key, reduce, initial [, keyf] [, cond] [, finalize] }`
 
 
 ## Regular Expression
